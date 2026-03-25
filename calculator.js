@@ -27,7 +27,14 @@ document.getElementById("numbers").addEventListener("submit", (event) => {
             result = "Error: that is not an operator"
         }
 
-        console.log(result)
+        // console.log(result)
+
+        // Add html elements to display the result of the calculations
+        const answer = document.getElementById("result")
+        const answerItem = document.createElement("p")
+        answerItem.textContent = "Result:   " + result
+        answer.append(answerItem)
+
 
         // Create an object for the calculations properties
         const calcs = {
@@ -40,7 +47,6 @@ document.getElementById("numbers").addEventListener("submit", (event) => {
         // Store the calculations in an array 
         history.push(calcs)
 
-        console.log(history)
 
         let calc = "" 
         const story = document.getElementById("history")
@@ -54,7 +60,7 @@ document.getElementById("numbers").addEventListener("submit", (event) => {
             const li = document.createElement("li")
             li.textContent = calc.Operands[0]+ " " +calc.Operator + " " +calc.Operands[1] + " = " +calc.Result
             story.append(li)
-
+            console.log(calc);
             // I emptied the array to prevent appending duplicates
             history.length = 0
         }
@@ -63,6 +69,7 @@ document.getElementById("numbers").addEventListener("submit", (event) => {
         return result
     }
     calculate()
+
 })
 
 

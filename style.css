@@ -28,11 +28,15 @@ input {
     height: 3rem;
     padding: 1rem;
     margin: 1rem;
+    font-size: 2rem;
 }
 
 #operator {
-    width: 3rem;
+    width: 5rem;
     height: 3rem;
+    background-color: #E2B850;
+    color: white;
+    text-align: center;
 }
 
 button {
